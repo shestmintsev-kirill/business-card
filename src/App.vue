@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Loader />
+    <Home />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Loader from "./components/Loader.vue";
+import Home from "./views/Home.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Loader,
+    Home,
+  },
+  mounted() {
+    if (localStorage.lang) {
+      this.$i18n.locale = JSON.parse(localStorage.lang);
+    }
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "@/assets/scss/style.scss";
+@import "normalize-scss";
+@include normalize();
+
+* {
+  box-sizing: border-box;
 }
 </style>
