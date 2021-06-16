@@ -76,7 +76,7 @@ export default {
 @import "@/assets/scss/style.scss";
 
 .section-partfolio {
-  background: #f6f6f6;
+  background: $yellow-bg;
   padding-bottom: 40px;
   padding-top: 50px;
 }

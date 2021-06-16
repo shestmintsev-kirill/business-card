@@ -77,7 +77,6 @@ export default {
 }
 
 .section-bg {
-  background: $yellow-bg;
   height: auto;
   padding-bottom: 30px;
 }

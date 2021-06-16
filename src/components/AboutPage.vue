@@ -3,7 +3,7 @@
     <div class="section-about-title">
       <span>{{ $t("AboutPage.title") }}</span>
     </div>
-    <div class="section-about-description">
+    <div class="section-about-description t-center">
       <i18n path="AboutPage.about">
         <br slot="break" />
       </i18n>
@@ -29,7 +29,7 @@ export default {
 @import "@/assets/scss/style.scss";
 
 .section-about {
-  background: #f6f6f6;
+  background: $yellow-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,6 @@ export default {
   &-title {
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 20px;
     letter-spacing: 3px;
   }
@@ -50,7 +49,6 @@ export default {
 
   &-description {
     margin-top: 20px;
-    text-align: center;
     font-weight: 500;
     margin-bottom: 10px;
 
@@ -74,5 +72,9 @@ export default {
       width: 55%;
     }
   }
+}
+
+.t-center {
+  text-align: center;
 }
 </style>

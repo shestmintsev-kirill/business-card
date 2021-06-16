@@ -111,16 +111,16 @@ button {
   }
 }
 .section-contact {
+  background: $yellow-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 110px;
 
   &-title {
     font-weight: bold;
     font-size: 35px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   &-text {
@@ -147,7 +147,7 @@ button {
     width: 100%;
     color: rgba(130, 130, 130, 1);
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 
     &-target + &-target {
       margin-left: 10px;
@@ -155,8 +155,6 @@ button {
   }
 
   @media (max-width: $screen-sm-max) {
-    margin-top: 60px;
-
     &-text {
       width: 100%;
     }
@@ -167,8 +165,6 @@ button {
   }
 
   @media (min-width: $screen-md) {
-    margin-top: 110px;
-
     &-text {
       width: 40%;
     }

@@ -4,13 +4,12 @@
     <Navbar />
     <div class="section-header-name">
       <div class="section-header-name-me">
-        <div class="name">
-          <h1 class="morphing">
-            <i18n class="word" path="HomePage.name1"></i18n>
-            <i18n class="word" path="HomePage.name2"></i18n>
-            <i18n class="word" path="HomePage.name3"></i18n>
-          </h1>
+        <div class="morphing">
+          <i18n class="word" path="HomePage.name1"></i18n>
+          <i18n class="word" path="HomePage.name2"></i18n>
+          <i18n class="word" path="HomePage.name3"></i18n>
         </div>
+
         <div @click="navClick" class="icon">
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
@@ -23,7 +22,11 @@
         </div>
       </div>
       <div class="section-header-name-photo">
-        <img src="@/assets/photom.jpg" alt="my-image" />
+        <img
+          class="animation-border"
+          src="@/assets/photom.jpg"
+          alt="my-image"
+        />
       </div>
     </div>
   </header>
@@ -65,39 +68,34 @@ export default {
 }
 
 .morphing {
-  position: relative;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
   font-size: 34px;
-  background-color: #fff;
-  color: #000;
   filter: contrast(25) blur(0px);
 }
 
 .word {
-  position: absolute;
   top: 70px;
-  animation: word 9s infinite ease-in-out;
+  animation: word 6s ease-in-out;
 
   &:nth-child(1) {
-    animation-delay: -9s;
+    animation-delay: -3s;
   }
   &:nth-child(2) {
-    animation-delay: -6s;
+    animation-delay: -2s;
   }
   &:nth-child(3) {
-    animation-delay: -3s;
+    animation-delay: -1s;
   }
 }
 
 @keyframes word {
-  0%,
-  5%,
-  85% {
-    filter: blur(0px);
+  90% {
     opacity: 1;
   }
   20%,
-  60% {
-    filter: blur(1em);
+  50% {
     opacity: 0;
   }
 }
@@ -139,16 +137,6 @@ export default {
       justify-content: space-between;
       margin: 20px 0;
 
-      .name {
-        font-size: 45px;
-        font-weight: bold;
-        letter-spacing: 1.1px;
-
-        h1 {
-          margin: 0;
-        }
-      }
-
       .profession {
         font-size: 18px;
       }
@@ -158,7 +146,6 @@ export default {
       img {
         width: 300px;
         height: 100%;
-        border-radius: 10px;
       }
     }
   }
@@ -166,11 +153,7 @@ export default {
     .profession {
       font-size: 15px;
     }
-    .name {
-      font-size: 30px;
-      font-weight: bold;
-      letter-spacing: 1.1px;
-    }
+
     .morphing {
       font-size: 26px;
     }
@@ -203,6 +186,10 @@ export default {
       font-size: 14px;
       top: 95px;
     }
+
+    .word + .word {
+      margin-top: 5px;
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -219,5 +206,30 @@ export default {
       }
     }
   }
+}
+
+@keyframes marching-ants {
+  0% {
+    background-position: 0 0, 10px 100%, 0 10px, 100% 0;
+  }
+  100% {
+    background-position: 10px 0, 0 100%, 0 0, 100% 10px;
+  }
+}
+
+.animation-border {
+  padding: 2px 2px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%),
+    linear-gradient(0, rgba(0, 0, 0, 0.2) 50%, transparent 50%),
+    linear-gradient(0, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+  animation: marching-ants 1s infinite linear;
 }
 </style>

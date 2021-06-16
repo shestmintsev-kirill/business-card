@@ -11,7 +11,7 @@
           </div>
           <div class="modal-body">
             <slot name="body">
-              <form action="https://formspree.io/f/mnqowzgd" method="POST">
+              <form action="https://formspree.io/f/xjvjrezr" method="POST">
                 <input
                   ref="input"
                   class="input-Name"
