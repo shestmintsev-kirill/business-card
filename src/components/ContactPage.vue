@@ -22,7 +22,7 @@
         :key="item.title"
         target="_blank"
         :href="item.link"
-        ><img :src="getImage(`${item.icon}`)" alt="sosial"
+        ><img class="sosial-img" :src="getImage(`${item.icon}`)" alt="sosial"
       /></a>
     </div>
     <div class="section-contact-footer">
@@ -54,28 +54,28 @@ export default {
   },
   data: () => ({
     showModal: false,
-    sosial: {
-      vk: {
-        title: "VK",
-        link: "https://vk.com/kir9i_l2",
-        icon: "vk.png",
+    sosial: [
+      {
+        title: "WhatsApp",
+        link: "https://wa.me/79785408650",
+        icon: "whatsapp.png",
       },
-      instagram: {
+      {
         title: "Instagram",
         link: "https://www.instagram.com/kirilljora",
         icon: "instagram.png",
       },
-      github: {
-        title: "GitHub",
-        link: "https://github.com/shestmintsev-kirill",
-        icon: "github.png",
+      {
+        title: "Telegram",
+        link: "https://t.me/ashestmintseva",
+        icon: "telegram.png",
       },
-      linkedin: {
+      {
         title: "LinkedIn",
-        link: "https://www.linkedin.com/in/KShestmintsev/",
+        link: "https://www.linkedin.com/in/ashestmintseva/",
         icon: "linkedin.png",
       },
-    },
+    ],
   }),
   methods: {
     getImage(img) {
@@ -115,6 +115,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 
   &-title {
     font-weight: bold;
@@ -141,6 +142,11 @@ button {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    .sosial-img {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &-footer {

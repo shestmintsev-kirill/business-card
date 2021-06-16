@@ -32,7 +32,7 @@ export default {
   left: 0;
   height: 80px;
   width: 100%;
-  z-index: 1;
+  z-index: 999;
   background-color: rgb(238, 238, 238);
   display: flex;
   align-items: center;
