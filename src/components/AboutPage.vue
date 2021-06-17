@@ -29,7 +29,7 @@ export default {
 @import "@/assets/scss/style.scss";
 
 .section-about {
-  background: $yellow-bg;
+  /* background: $yellow-bg; */
   display: flex;
   flex-direction: column;
   align-items: center;

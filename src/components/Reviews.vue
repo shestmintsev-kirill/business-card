@@ -3,43 +3,44 @@
     <div class="section-reviews">
       <h1 class="section-reviews-title">Отзывы</h1>
       <VueSlickCarousel v-bind="settings">
-        <div class="section-reviews-wrapper">
+        <div
+          v-for="(review, index) in reviews"
+          :key="index"
+          class="section-reviews-wrapper"
+        >
           <div>
-            <img
-              class="section-reviews-platform"
-              src="../assets/profi.png"
-              alt="platform"
-            />
+            <!-- <img
+                class="section-reviews-platform"
+                src="../assets/profi.png"
+                alt="platform"
+              /> -->
             <img
               class="section-reviews-photo"
-              src="../assets/excel.png"
+              :src="
+                review.photo
+                  ? getImage(`${review.photo}`)
+                  : getImage('user.png')
+              "
               alt="client"
             />
+            <p class="section-reviews-name">{{ review.name }}</p>
           </div>
-          <p class="section-reviews-description">
-            В раздел «Параметры продукта» разместить лонгрид «Параметры продукта
-            Защита от травм» и тестовые вопросы «Тестирование к Параметры
-            продукта Защита от травм»
-          </p>
-          <p class="section-reviews-name">Иван иванов</p>
-        </div>
-        <div class="section-reviews-wrapper">
-          <img
-            class="section-reviews-photo"
-            src="../assets/excel.png"
-            alt="client"
-          />
-          <p class="section-reviews-description">
-            В раздел «Параметры продукта» разместить лонгрид «Параметры продукта
-            Защита от травм» и тестовые вопросы «Тестирование к Параметры
-            продукта Защита от травм»В раздел «Параметры продукта» разместить
-            лонгрид «Параметры продукта Защита от травм» и тестовые вопросы
-            «Тестирование к Параметры продукта Защита от травм»В раздел
-            «Параметры продукта» разместить лонгрид «Параметры продукта Защита
-            от травм» и тестовые вопросы «Тестирование к Параметры продукта
-            Защита от травм»
-          </p>
-          <p class="section-reviews-name">Иван иванов</p>
+          <div class="section-reviews-description">
+            <h3>{{ review.title }}</h3>
+            <span>
+              {{
+                review.showDescription
+                  ? review.description
+                  : review.description.split(" ").slice(0, 10).join(" ")
+              }}
+            </span>
+            <a
+              @click.prevent="review.showDescription = !review.showDescription"
+              href="/"
+            >
+              {{ review.showDescription ? " . . . скрыть" : " . . ." }}</a
+            >
+          </div>
         </div>
       </VueSlickCarousel>
     </div>
@@ -61,11 +62,101 @@ export default {
       arrows: true,
       dots: true,
       infinite: true,
-      adaptiveHeight: true,
-      slidesToScroll: 1,
-      rtl: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      vertical: true,
+      verticalSwiping: true,
     },
+    reviews: [
+      {
+        photo: "",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздеот травм» и тестовые вопросы «Тестаметры продукта Защита от травм»",
+      },
+      {
+        photo: "",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел привет при вет «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм» Защита от травм» и тестовые вопросы  Защита от травм» и тестовые вопросы ",
+      },
+      {
+        photo: "",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+      {
+        photo: "excel.png",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+      {
+        photo: "excel.png",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+      {
+        photo: "excel.png",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+      {
+        photo: "excel.png",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+      {
+        photo: "excel.png",
+        name: "Иван иванов",
+        title: "Консультация по Power BI",
+        platform: "",
+        showDescription: false,
+        description:
+          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+      },
+    ],
   }),
+  mounted() {
+    this.arrowCarouselWidth();
+  },
+  methods: {
+    arrowCarouselWidth() {
+      if (document.documentElement.clientWidth < 758) {
+        this.settings.arrows = false;
+      } else {
+        this.settings.arrows = true;
+      }
+    },
+    getImage(img) {
+      return require("@/assets/" + img);
+    },
+  },
 };
 </script>
 
@@ -84,11 +175,11 @@ export default {
 .section-reviews {
   .slick-prev,
   .slick-next {
-    top: 100px;
+    top: 150px;
     z-index: 2;
   }
 
-  max-width: 600px;
+  max-width: 645px;
   margin: 0 auto;
 
   &-title {
@@ -99,14 +190,15 @@ export default {
 
   &-wrapper {
     display: flex !important;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    margin-left: 10px;
   }
 
   &-photo {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
   }
 
   &-platform {
@@ -115,12 +207,22 @@ export default {
   }
 
   &-description {
-    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    margin-left: 50px;
     margin-bottom: 0;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &-name {
+    margin: 0;
     font-weight: bold;
+    font-size: 12px;
+    text-align: center;
   }
 
   @media (max-width: $screen-sm-max) {

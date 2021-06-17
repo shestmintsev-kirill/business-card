@@ -126,7 +126,7 @@ export default {
   margin-right: auto;
 }
 .section-partfolio {
-  background: #f6f6f6;
+  /* background: #f6f6f6; */
   padding-top: 60px;
 
   &-head {

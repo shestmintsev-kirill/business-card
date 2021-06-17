@@ -111,7 +111,7 @@ button {
   }
 }
 .section-contact {
-  background: $yellow-bg;
+  /* background: $yellow-bg; */
   display: flex;
   flex-direction: column;
   align-items: center;

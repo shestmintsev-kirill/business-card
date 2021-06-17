@@ -146,6 +146,7 @@ export default {
       img {
         width: 300px;
         height: 100%;
+        border-radius: 5px;
       }
     }
   }
@@ -208,7 +209,7 @@ export default {
   }
 }
 
-@keyframes marching-ants {
+/* @keyframes marching-ants {
   0% {
     background-position: 0 0, 10px 100%, 0 10px, 100% 0;
   }
@@ -231,5 +232,5 @@ export default {
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
   animation: marching-ants 1s infinite linear;
-}
+} */
 </style>
