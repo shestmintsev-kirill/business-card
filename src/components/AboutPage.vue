@@ -3,7 +3,7 @@
     <div class="section-about-title">
       <span>{{ $t("AboutPage.title") }}</span>
     </div>
-    <div class="section-about-description t-center">
+    <div class="section-about-description">
       <i18n path="AboutPage.about">
         <br slot="break" />
       </i18n>
@@ -40,17 +40,18 @@ export default {
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: 3px;
+    text-align: center;
   }
 
   &-title:first-child {
     margin-top: 100px;
-    font-size: 35px;
   }
 
   &-description {
     margin-top: 20px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
+    text-align: justify;
 
     &-link {
       cursor: pointer;
@@ -59,7 +60,7 @@ export default {
   }
 
   &-description:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
   @media (max-width: $screen-xs-max) {
     &-description {
@@ -72,9 +73,5 @@ export default {
       width: 55%;
     }
   }
-}
-
-.t-center {
-  text-align: center;
 }
 </style>

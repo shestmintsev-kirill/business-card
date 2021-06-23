@@ -16,11 +16,7 @@
               /> -->
             <img
               class="section-reviews-photo"
-              :src="
-                review.photo
-                  ? getImage(`${review.photo}`)
-                  : getImage('user.png')
-              "
+              :src="review.sex ? getImage(`man.png`) : getImage('woman.png')"
               alt="client"
             />
             <p class="section-reviews-name">{{ review.name }}</p>
@@ -34,7 +30,9 @@
                   : review.description.split(" ").slice(0, 10).join(" ")
               }}
             </span>
+            <br v-if="review.showDescription" />
             <a
+              v-if="review.description.length > 90"
               @click.prevent="review.showDescription = !review.showDescription"
               href="/"
             >
@@ -62,88 +60,79 @@ export default {
       arrows: true,
       dots: true,
       infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      vertical: true,
-      verticalSwiping: true,
+      rows: 3,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
     },
     reviews: [
       {
-        photo: "",
-        name: "Иван иванов",
-        title: "Консультация по Power BI",
+        sex: false,
+        name: "Ольга",
+        title: "Консультация по инвестициям",
         platform: "",
         showDescription: false,
         description:
-          "В раздеот травм» и тестовые вопросы «Тестаметры продукта Защита от травм»",
+          "Алина помогла мне разобраться в базовых вещах в инвестициях, ответила на все вопросы доступным языком. Очень внимательная к вопросам, рекомендую!",
       },
       {
-        photo: "",
-        name: "Иван иванов",
-        title: "Консультация по Power BI",
+        sex: true,
+        name: "Михаил",
+        title: "Аналитика под ключ в Power BI",
         platform: "",
         showDescription: false,
         description:
-          "В раздел привет при вет «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм» Защита от травм» и тестовые вопросы  Защита от травм» и тестовые вопросы ",
+          "Все четко, в срок и по делу. Алина сделала срочную для нас задачу и результат презентовала заказчику. Речь поставлена, в Power BI разбирается на отлично!",
       },
       {
-        photo: "",
-        name: "Иван иванов",
+        sex: true,
+        name: "Эльдар",
         title: "Консультация по Power BI",
         platform: "",
         showDescription: false,
         description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+          "Хорошее знание мат части. Понятное объяснение. Быстрый прогресс.",
       },
       {
-        photo: "excel.png",
-        name: "Иван иванов",
-        title: "Консультация по Power BI",
+        sex: true,
+        name: "Евгений",
+        title: "Консультация по Power Query",
         platform: "",
         showDescription: false,
         description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+          "Отличное объяснение Power Query. По моей задаче было подсказано очень быстро и все было предельно понятно. Специалист отвечает на все вопросы и у неё получилось объяснить даже такому тупому человеку как я",
       },
       {
-        photo: "excel.png",
-        name: "Иван иванов",
+        sex: true,
+        name: "Денис",
         title: "Консультация по Power BI",
         platform: "",
         showDescription: false,
-        description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+        description: "Все супер",
       },
       {
-        photo: "excel.png",
-        name: "Иван иванов",
+        sex: true,
+        name: "Тимофей",
         title: "Консультация по Power BI",
         platform: "",
         showDescription: false,
         description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+          "Хороши специалист. Всё понятно объяснила. Всем рекомендую данного специалиста.",
       },
       {
-        photo: "excel.png",
-        name: "Иван иванов",
+        sex: false,
+        name: "Раиса",
         title: "Консультация по Power BI",
         platform: "",
         showDescription: false,
         description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
-      },
-      {
-        photo: "excel.png",
-        name: "Иван иванов",
-        title: "Консультация по Power BI",
-        platform: "",
-        showDescription: false,
-        description:
-          "В раздел «Параметры продукта» разместить лонгрид «Параметры продукта Защита от травм» и тестовые вопросы «Тестирование к Параметры продукта Защита от травм»",
+          "Спасибо. Алина объясняет с большим желанием помочь. Терпеливо, доходчиво. Рекомендую!",
       },
     ],
   }),
   mounted() {
     this.arrowCarouselWidth();
+    console.log(this.reviews.length);
   },
   methods: {
     arrowCarouselWidth() {
@@ -175,7 +164,7 @@ export default {
 .section-reviews {
   .slick-prev,
   .slick-next {
-    top: 150px;
+    top: 30px;
     z-index: 2;
   }
 
@@ -192,13 +181,12 @@ export default {
     display: flex !important;
     /* flex-direction: column; */
     align-items: center;
-    margin-left: 10px;
   }
 
   &-photo {
     margin: 0 auto;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
   &-platform {
@@ -223,6 +211,7 @@ export default {
     font-weight: bold;
     font-size: 12px;
     text-align: center;
+    width: 70px;
   }
 
   @media (max-width: $screen-sm-max) {

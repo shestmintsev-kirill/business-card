@@ -55,7 +55,7 @@
                   </button>
                   <button
                     class="modal-default-button close"
-                    @click.stop="$emit('close'), enableScrolling()"
+                    @click.prevent="$emit('close'), enableScrolling()"
                   >
                     {{ $t("Modal.close") }}
                   </button>
@@ -237,6 +237,9 @@ textarea {
 .modal-default-button {
   width: 100px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 15px;
   transition: 0.5s;
@@ -245,6 +248,10 @@ textarea {
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  & + & {
+    margin-left: 5px;
   }
 }
 
