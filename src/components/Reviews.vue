@@ -87,7 +87,7 @@ export default {
       {
         sex: true,
         name: "Эльдар",
-        title: "Консультация по Power BI",
+        title: "Обучение Power BI",
         platform: "",
         showDescription: false,
         description:
@@ -113,7 +113,7 @@ export default {
       {
         sex: true,
         name: "Тимофей",
-        title: "Консультация по Power BI",
+        title: "Обучение по Power BI",
         platform: "",
         showDescription: false,
         description:
@@ -122,7 +122,7 @@ export default {
       {
         sex: false,
         name: "Раиса",
-        title: "Консультация по Power BI",
+        title: "Обучение Excel",
         platform: "",
         showDescription: false,
         description:
@@ -132,7 +132,6 @@ export default {
   }),
   mounted() {
     this.arrowCarouselWidth();
-    console.log(this.reviews.length);
   },
   methods: {
     arrowCarouselWidth() {
@@ -166,6 +165,14 @@ export default {
   .slick-next {
     top: 30px;
     z-index: 2;
+  }
+
+  .slick-prev {
+    left: -55px;
+  }
+
+  .slick-next {
+    right: -55px;
   }
 
   max-width: 645px;

@@ -24,28 +24,28 @@
 export default {
   name: "SkillsPage",
   data: () => ({
-    skillsList: {
-      excel: {
+    skillsList: [
+      {
         title: "Excel",
         img: "excel.png",
       },
-      "power-bi": {
+      {
         title: "Power BI",
         img: "power-bi.png",
       },
-      sql: {
+      {
         title: "SQL",
         img: "sql.png",
       },
-      dax: {
+      {
         title: "DAX",
         img: "dax.png",
       },
-      m: {
+      {
         title: "M",
         img: "m.png",
       },
-    },
+    ],
   }),
   methods: {
     getImage(img) {
@@ -94,7 +94,7 @@ export default {
     justify-content: space-between;
 
     &-vue {
-      img {
+      img[alt="skill"] {
         width: 128px;
         height: 128px;
       }
@@ -102,7 +102,7 @@ export default {
   }
   @media (max-width: $screen-sm-max) {
     &-content {
-      img {
+      img[alt="skill"] {
         width: 90px;
         height: 90px;
       }
@@ -120,12 +120,22 @@ export default {
     }
     &-content {
       margin-top: 40px;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
 
-      img {
+      img[alt="skill"] {
+        width: 70px;
+        height: 70px;
+      }
+
+      &-vue {
         width: 90px;
-        height: 90px;
+
+        &-logo {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 5px;
+        }
       }
     }
   }
@@ -140,7 +150,8 @@ export default {
     &-content {
       margin-bottom: 100px;
       margin-top: 80px;
-      img {
+
+      img[alt="skill"] {
         margin-bottom: 20px;
       }
     }
