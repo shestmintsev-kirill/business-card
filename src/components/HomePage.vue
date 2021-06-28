@@ -197,8 +197,8 @@ export default {
     }
 
     .word {
-      font-size: 14px;
-      top: 95px;
+      font-size: 18px;
+      top: 105px;
     }
 
     .word + .word {
@@ -221,29 +221,4 @@ export default {
     }
   }
 }
-
-/* @keyframes marching-ants {
-  0% {
-    background-position: 0 0, 10px 100%, 0 10px, 100% 0;
-  }
-  100% {
-    background-position: 10px 0, 0 100%, 0 0, 100% 10px;
-  }
-}
-
-.animation-border {
-  padding: 2px 2px;
-  border-radius: 5px;
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.2) 50%,
-      transparent 50%
-    ),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%),
-    linear-gradient(0, rgba(0, 0, 0, 0.2) 50%, transparent 50%),
-    linear-gradient(0, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
-  animation: marching-ants 1s infinite linear;
-} */
 </style>

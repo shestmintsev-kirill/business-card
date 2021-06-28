@@ -85,26 +85,15 @@ export default {
     ],
   }),
 
-  mounted() {
-    this.iconsShowWidth();
-  },
-
   methods: {
     getImage(img) {
       return require("@/assets/AboutIcons/" + img);
     },
-    iconsShowWidth() {
-      if (
-        document.documentElement.clientWidth < 750 ||
-        window.pageYOffset < 400
-      ) {
-        this.showIcons = false;
-      } else {
-        this.showIcons = true;
-      }
-    },
     handleScroll() {
-      if (window.pageYOffset > 400) {
+      if (
+        window.pageYOffset > 400 &&
+        document.documentElement.clientWidth > 750
+      ) {
         this.showIcons = true;
       }
     },

@@ -8,12 +8,16 @@
           :key="index"
           class="section-reviews-wrapper"
         >
-          <div>
-            <!-- <img
-                class="section-reviews-platform"
-                src="../assets/profi.png"
-                alt="platform"
-              /> -->
+          <div class="user-card">
+            <div class="userd-card-view">
+              <a target="_blank" href="/">
+                <img
+                  class="user-card-view-platform"
+                  :src="getImage(review.platform)"
+                  alt="platform"
+                />
+              </a>
+            </div>
             <img
               class="section-reviews-photo"
               :src="review.sex ? getImage(`man.png`) : getImage('woman.png')"
@@ -70,7 +74,7 @@ export default {
         sex: false,
         name: "Ольга",
         title: "Консультация по инвестициям",
-        platform: "",
+        platform: "profi.jpg",
         showDescription: false,
         description:
           "Алина помогла мне разобраться в базовых вещах в инвестициях, ответила на все вопросы доступным языком. Очень внимательная к вопросам, рекомендую!",
@@ -79,7 +83,7 @@ export default {
         sex: true,
         name: "Михаил",
         title: "Аналитика под ключ в Power BI",
-        platform: "",
+        platform: "telegram2.png",
         showDescription: false,
         description:
           "Все четко, в срок и по делу. Алина сделала срочную для нас задачу и результат презентовала заказчику. Речь поставлена, в Power BI разбирается на отлично!",
@@ -88,7 +92,7 @@ export default {
         sex: true,
         name: "Эльдар",
         title: "Обучение Power BI",
-        platform: "",
+        platform: "profi.jpg",
         showDescription: false,
         description:
           "Хорошее знание мат части. Понятное объяснение. Быстрый прогресс.",
@@ -97,7 +101,7 @@ export default {
         sex: true,
         name: "Евгений",
         title: "Консультация по Power Query",
-        platform: "",
+        platform: "fl.png",
         showDescription: false,
         description:
           "Отличное объяснение Power Query. По моей задаче было подсказано очень быстро и все было предельно понятно. Специалист отвечает на все вопросы и у неё получилось объяснить даже такому тупому человеку как я",
@@ -106,7 +110,7 @@ export default {
         sex: true,
         name: "Денис",
         title: "Консультация по Power BI",
-        platform: "",
+        platform: "telegram2.png",
         showDescription: false,
         description: "Все супер",
       },
@@ -114,7 +118,7 @@ export default {
         sex: true,
         name: "Тимофей",
         title: "Обучение по Power BI",
-        platform: "",
+        platform: "fl.png",
         showDescription: false,
         description:
           "Хороши специалист. Всё понятно объяснила. Всем рекомендую данного специалиста.",
@@ -123,7 +127,7 @@ export default {
         sex: false,
         name: "Раиса",
         title: "Обучение Excel",
-        platform: "",
+        platform: "profi.jpg",
         showDescription: false,
         description:
           "Спасибо. Алина объясняет с большим желанием помочь. Терпеливо, доходчиво. Рекомендую!",
@@ -199,11 +203,6 @@ export default {
     height: 40px;
   }
 
-  &-platform {
-    height: 10px;
-    margin: 0 auto;
-  }
-
   &-description {
     width: 100%;
     font-size: 14px;
@@ -231,6 +230,30 @@ export default {
 
     .slick-next {
       right: -15px;
+    }
+  }
+}
+
+.user-card {
+  position: relative;
+
+  &-view {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    &-platform {
+      height: 40px;
+      width: 40px;
+      margin: 0 auto;
+      position: absolute;
+      left: 67px;
+      top: 5px;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.15);
+      }
     }
   }
 }
