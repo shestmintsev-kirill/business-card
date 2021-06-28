@@ -4,6 +4,7 @@
     <AboutPage />
     <SkillsPage />
     <PortfolioPage />
+    <Reviews />
     <ContactPage />
   </div>
 </template>
@@ -14,6 +15,7 @@ import AboutPage from "@/components/AboutPage.vue";
 import SkillsPage from "@/components/SkillsPage.vue";
 import PortfolioPage from "@/components/PortfolioPage.vue";
 import ContactPage from "@/components/ContactPage.vue";
+import Reviews from "@/components/Reviews.vue";
 
 export default {
   name: "Home",
@@ -22,6 +24,7 @@ export default {
     AboutPage,
     SkillsPage,
     PortfolioPage,
+    Reviews,
     ContactPage,
   },
 };

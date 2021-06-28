@@ -153,6 +153,7 @@ export default {
 * {
   @include font-eng;
   @include font-ru;
+  outline: none;
 }
 
 .section-bg {
@@ -161,6 +162,8 @@ export default {
 }
 
 .section-reviews {
+  user-select: none;
+
   .slick-prev,
   .slick-next {
     top: 30px;
@@ -168,11 +171,11 @@ export default {
   }
 
   .slick-prev {
-    left: -55px;
+    left: -70px;
   }
 
   .slick-next {
-    right: -55px;
+    right: -70px;
   }
 
   max-width: 645px;
@@ -182,11 +185,11 @@ export default {
     text-align: center;
     margin-top: 0;
     padding-top: 20px;
+    font-size: 24px;
   }
 
   &-wrapper {
     display: flex !important;
-    /* flex-direction: column; */
     align-items: center;
   }
 
@@ -221,13 +224,13 @@ export default {
     width: 70px;
   }
 
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: 795px) {
     .slick-prev {
-      left: 10px;
+      left: -15px;
     }
 
     .slick-next {
-      right: 10px;
+      right: -15px;
     }
   }
 }

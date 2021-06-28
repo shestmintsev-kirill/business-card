@@ -4,16 +4,15 @@
       <PortfolioView :portfolio="portfolio" @show-modal="showModal" />
       <Portfolio v-if="show" :portfolio="show" @close-modal="closeModal" />
     </div>
-    <Reviews />
   </section>
 </template>
 
 <script>
 import Portfolio from "./Portfolio";
 import PortfolioView from "./PortfolioView.vue";
-import Reviews from "./Reviews.vue";
+
 export default {
-  components: { PortfolioView, Portfolio, Reviews },
+  components: { PortfolioView, Portfolio },
   name: "PartfolioPage",
   data: () => ({
     show: null,

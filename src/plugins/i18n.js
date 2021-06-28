@@ -47,6 +47,7 @@ export const i18n = new VueI18n({
         about: "About me",
         skills: "Skills",
         portfolio: "Portfolio",
+        reviews: "Reviews",
         contact: "Contacts",
       },
       Modal: {
@@ -109,6 +110,7 @@ export const i18n = new VueI18n({
         about: "Обо мне",
         skills: "Навыки",
         portfolio: "Портфолио",
+        reviews: "Отзывы",
         contact: "Контакты",
       },
       Modal: {

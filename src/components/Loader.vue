@@ -35,8 +35,11 @@ $color: #696969, #797979, #b3b3b3, #d3d3d3, #e0e0e0;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
+  background-color: rgb(238, 238, 238);
   overflow: hidden;
-  z-index: 9999;
+  z-index: 999;
+  position: fixed;
 }
 
 $circle-size: 20px;

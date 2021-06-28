@@ -1,7 +1,12 @@
 <template>
   <header class="section-outer section-header">
-    <MobilNavbar v-if="navigation" @back="closeNav" @unvisible="closeNav" />
-    <Navbar />
+    <MobilNavbar
+      v-if="navigation"
+      :links="links"
+      @back="closeNav"
+      @unvisible="closeNav"
+    />
+    <Navbar :links="links" />
     <div class="section-header-name">
       <div class="section-header-name-me">
         <div class="morphing">
@@ -9,7 +14,6 @@
           <i18n class="word" path="HomePage.name2"></i18n>
           <i18n class="word" path="HomePage.name3"></i18n>
         </div>
-
         <div @click="navClick" class="icon">
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
@@ -44,6 +48,15 @@ export default {
   },
   data: () => ({
     navigation: false,
+    scrollNav: false,
+    links: [
+      "Navbar.home",
+      "Navbar.about",
+      "Navbar.skills",
+      "Navbar.portfolio",
+      "Navbar.reviews",
+      "Navbar.contact",
+    ],
   }),
 
   methods: {

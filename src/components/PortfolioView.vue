@@ -132,7 +132,7 @@ export default {
   &-head {
     text-align: center;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 24px;
   }
 
   &-project {

@@ -5,8 +5,8 @@
     </div>
     <div class="section-contact-text">
       <span>{{ $t("ContactPage.description") }}</span>
-      <p>+7-999-967-96-14</p>
-      <p>1kirillmihail1@gmail.com</p>
+      <a href="tel:+79857591752">+7(985)-759-17-52</a>
+      <a href="mailto:a.shestmintseva@gmail.com">a.shestmintseva@gmail.com</a>
     </div>
     <div class="section-contact-btn">
       <button id="show-modal" @click="showModal = true" class="animation">
@@ -24,22 +24,6 @@
         :href="item.link"
         ><img class="sosial-img" :src="getImage(`${item.icon}`)" alt="sosial"
       /></a>
-    </div>
-    <div class="section-contact-footer">
-      <span
-        >{{ $t("ContactPage.sosial") }}<br />
-        <div>
-          <a
-            v-for="item in sosial"
-            :key="item.link"
-            target="_blank"
-            :href="item.link"
-            class="section-contact-footer-target"
-          >
-            {{ item.title }}
-          </a>
-        </div>
-      </span>
     </div>
   </footer>
 </template>
@@ -119,7 +103,7 @@ button {
 
   &-title {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 24px;
     letter-spacing: 2px;
     margin: 20px 0;
   }
@@ -141,22 +125,10 @@ button {
     width: 20%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
 
     .sosial-img {
       width: 32px;
       height: 32px;
-    }
-  }
-
-  &-footer {
-    width: 100%;
-    color: rgba(130, 130, 130, 1);
-    text-align: center;
-    margin-bottom: 20px;
-
-    &-target + &-target {
-      margin-left: 10px;
     }
   }
 

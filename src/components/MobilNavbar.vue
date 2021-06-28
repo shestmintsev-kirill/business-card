@@ -32,15 +32,12 @@
 <script>
 export default {
   name: "MobilNavbar",
-  data: () => ({
-    links: [
-      "Navbar.home",
-      "Navbar.about",
-      "Navbar.skills",
-      "Navbar.portfolio",
-      "Navbar.contact",
-    ],
-  }),
+  props: {
+    links: {
+      type: Array,
+      default: () => [],
+    },
+  },
   mounted() {
     this.disableScrolling();
   },
