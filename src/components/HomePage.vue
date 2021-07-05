@@ -26,11 +26,7 @@
         </div>
       </div>
       <div class="section-header-name-photo">
-        <img
-          class="animation-border"
-          src="@/assets/photom.jpg"
-          alt="my-image"
-        />
+        <img class="animation-border" src="@/assets/photo.png" alt="my-image" />
       </div>
     </div>
   </header>
@@ -123,12 +119,8 @@ export default {
 
 .icon {
   position: fixed;
-  padding-right: 10px;
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
   cursor: pointer;
-  right: 20px;
   z-index: 10;
 }
 
@@ -157,7 +149,7 @@ export default {
 
     &-photo {
       img {
-        width: 300px;
+        width: 220px;
         height: 100%;
         border-radius: 5px;
       }
@@ -191,7 +183,7 @@ export default {
         display: flex;
         justify-content: flex-end;
         img {
-          width: 160px;
+          width: 125px;
         }
       }
     }

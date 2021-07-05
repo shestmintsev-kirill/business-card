@@ -43,43 +43,43 @@ export default {
       {
         img: "icon_1.png",
         left: 120 + "px",
-        top: 100 + "px",
+        top: 30 + "px",
         transform: "rotate(20deg)",
       },
       {
         img: "icon_2.png",
         right: 100 + "px",
-        top: 165 + "px",
+        top: 95 + "px",
         transform: "rotate(-35deg)",
       },
       {
         img: "icon_3.png",
         left: 55 + "px",
-        top: 280 + "px",
+        top: 210 + "px",
         transform: "rotate(-10deg)",
       },
       {
         img: "icon_4.png",
         right: 45 + "px",
-        top: 340 + "px",
+        top: 270 + "px",
         transform: "rotate(15deg)",
       },
       {
         img: "icon_5.png",
         left: 95 + "px",
-        top: 420 + "px",
+        top: 350 + "px",
         transform: "rotate(0deg)",
       },
       {
         img: "icon_6.png",
         right: 110 + "px",
-        top: 520 + "px",
+        top: 450 + "px",
         transform: "rotate(-20deg)",
       },
       {
         img: "icon_7.png",
         left: 90 + "px",
-        top: 550 + "px",
+        top: 480 + "px",
         transform: "rotate(30deg)",
       },
     ],
@@ -91,7 +91,7 @@ export default {
     },
     handleScroll() {
       if (
-        window.pageYOffset > 400 &&
+        window.pageYOffset > 350 &&
         document.documentElement.clientWidth > 750
       ) {
         this.showIcons = true;
@@ -126,7 +126,7 @@ export default {
   }
 
   &-title:first-child {
-    margin-top: 100px;
+    margin-top: 30px;
   }
 
   &-description {
