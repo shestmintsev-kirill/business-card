@@ -16,11 +16,14 @@
               /></a>
             </div>
             <div class="section-partfolio-title-text">
-              <span class="title-wrapper">{{ $t(portfolio.title) }}</span>
-              <div class="github">
-                <a target="_blank" :href="portfolio.link"
-                  ><img src="@/assets/github.png" alt="github"
-                /></a>
+              <div>
+                <p class="title-wrapper">{{ $t(portfolio.title) }}</p>
+                <p class="title-wrapper light">
+                  {{ $t(portfolio.description) }}
+                </p>
+                <p v-if="portfolio.disclamer" class="disclamer">
+                  {{ $t(portfolio.disclamer) }}
+                </p>
               </div>
             </div>
           </div>
@@ -63,6 +66,7 @@ export default {
     },
   }),
   mounted() {
+    document.title = "Портфолио";
     this.arrowCarouselWidth();
     this.disableScrolling();
   },
@@ -86,15 +90,15 @@ export default {
       }
     },
     disableScrolling() {
-      var x = window.scrollX;
-      var y = window.scrollY;
-      window.onscroll = function () {
+      let x = window.scrollX;
+      let y = window.scrollY;
+      window.onscroll = () => {
         window.scrollTo(x, y);
       };
     },
 
     enableScrolling() {
-      window.onscroll = function () {};
+      window.onscroll = () => {};
     },
   },
 };
@@ -151,6 +155,17 @@ export default {
   padding: 0 20px;
 }
 
+.light {
+  font-weight: 400;
+}
+
+.disclamer {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
 .back {
   border-radius: 20px;
   border: 0;
@@ -190,18 +205,15 @@ export default {
 
       @media (max-width: $screen-xs-max) {
         font-size: 12px;
-      }
 
-      .github {
-        width: 35px;
-        transition: 0.3s;
-        &:hover {
-          transform: scale(1.1);
+        .disclamer {
+          font-size: 10px;
         }
       }
 
       .title-wrapper {
         flex: auto;
+        padding: 0 10px;
       }
     }
   }

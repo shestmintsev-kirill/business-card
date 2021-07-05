@@ -133,7 +133,6 @@ export default {
     margin-top: 20px;
     font-weight: 500;
     margin-bottom: 35px;
-    text-align: justify;
 
     &-link {
       cursor: pointer;

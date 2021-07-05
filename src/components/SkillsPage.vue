@@ -129,7 +129,7 @@ export default {
       }
 
       &-vue {
-        width: 90px;
+        width: 100px;
 
         &-logo {
           display: flex;

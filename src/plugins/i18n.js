@@ -4,8 +4,8 @@ import VueI18n from "vue-i18n";
 Vue.use(VueI18n);
 
 export const i18n = new VueI18n({
-  locale: "en",
-  fallbackLocale: "ru",
+  locale: "ru",
+  fallbackLocale: "en",
   messages: {
     en: {
       HomePage: {
@@ -27,13 +27,11 @@ export const i18n = new VueI18n({
       },
       PortfolioPage: {
         title: "Portfolio",
-        onlineStore:
-          "Project - Online store using Firebase, Vuex, Vue-router and Vuetify",
-        link: "More...",
-        movieApp:
-          "Project - Movies Top 250 using Vue-router, Vuex and Bootstrap-vue",
-        contactBook:
-          "Project - Contact book using Vue-router (dynamic route matching), Vuex, LocalStorage",
+        project_1: `В дэшборде представлены таблицы и графики для анализа основных KPI по блоку основных затрат, а именно сырья и упаковки, используемых для производства. Основные показатели: инфляция, точность прогноза, отклонение цены и количества от плана.`,
+        project_2:
+          "В дэшборде представлены визуализации для анализа выручки, количества учеников, среднего чека по ученику по различным курсам, периодам, источникам лидов.",
+        project_3:
+          "В дэшборде представлена аналитика работы офисов по лидам, воронки продаж и системы контроля качества обслуживания клиентов.",
       },
       ContactPage: {
         title: "Contacts",
@@ -59,15 +57,15 @@ export const i18n = new VueI18n({
         close: "Close",
         alert: "Thank you for contacting me",
       },
-      PortfolioStore: {
-        title: "Online store using Firebase, Vuex, Vue-router and Vuetify",
+      Project_1: {
+        title: `Анализ основных затрат для компании "Mars"`,
+        disclamer: "*Цифры скрыты для соблюдения Коммерческой тайны",
       },
-      PortfolioMovie: {
-        title: "Movies app using Vue-router, Vuex and Bootstrap-vue",
+      Project_2: {
+        title: "Анализ продаж для онлайн-школы",
       },
-      PortfolioContactBook: {
-        title:
-          "Contact book using Vue-router (dynamic route matching), Vuex, LocalStorage",
+      Project_3: {
+        title: "Анализ работы отдела продаж",
       },
     },
     ru: {
@@ -90,13 +88,11 @@ export const i18n = new VueI18n({
       },
       PortfolioPage: {
         title: "Портфолио",
-        onlineStore:
-          "Онлайн магазин с использованием Firebase, Vuex, Vue-router и Vuetify",
-        link: "Подробнее...",
-        movieApp:
-          "Топ 250 фильмов с использованием Vue-router, Vuex и Bootstrap-vue",
-        contactBook:
-          "Контактная книга с использованием Vue-router (динамические пути), Vuex, LocalStorage",
+        project_1: `В дэшборде представлены таблицы и графики для анализа основных KPI по блоку основных затрат, а именно сырья и упаковки, используемых для производства. Основные показатели: инфляция, точность прогноза, отклонение цены и количества от плана`,
+        project_2:
+          "В дэшборде представлены визуализации для анализа выручки, количества учеников, среднего чека по ученику по различным курсам, периодам, источникам лидов",
+        project_3:
+          "В дэшборде представлена аналитика работы офисов по лидам, воронки продаж и системы контроля качества обслуживания клиентов",
       },
       ContactPage: {
         title: "Контакты",
@@ -122,17 +118,15 @@ export const i18n = new VueI18n({
         close: "Закрыть",
         alert: "Спасибо что связались со мной",
       },
-      PortfolioStore: {
-        title:
-          "Онлайн магазин с использованием Firebase, Vuex, Vue-router и Vuetify",
+      Project_1: {
+        title: `Анализ основных затрат для компании "Mars"`,
+        disclamer: "*Цифры скрыты для соблюдения Коммерческой тайны",
       },
-      PortfolioMovie: {
-        title:
-          "Топ 250 фильмов с использованием Vue-router, Vuex и Bootstrap-vue",
+      Project_2: {
+        title: "Анализ продаж для онлайн-школы",
       },
-      PortfolioContactBook: {
-        title:
-          "Контактная книга с использованием Vue-router (динамические пути), Vuex, LocalStorage",
+      Project_3: {
+        title: "Анализ работы отдела продаж",
       },
     },
   },

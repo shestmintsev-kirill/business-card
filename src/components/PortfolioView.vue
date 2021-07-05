@@ -10,22 +10,19 @@
           :key="i"
           class="section-partfolio-project"
         >
-          <div class="section-partfolio-project-promo">
+          <div
+            @click.prevent="$emit('show-modal', project)"
+            class="section-partfolio-project-promo"
+          >
             <a
               ><img
                 class="project-img"
-                @click.prevent="$emit('show-modal', project)"
                 :src="getImage(`${project.imgView}`)"
                 alt="onlinestore"
             /></a>
             <div class="after">
-              {{ $t(project.description) }}
+              {{ $t(project.title) }}
             </div>
-            <!-- <div class="section-partfolio-project-link">
-              <a @click.prevent="$emit('show-modal', project)">
-                {{ $t("PortfolioPage.link") }}
-              </a>
-            </div> -->
           </div>
         </div>
       </VueSlickCarousel>
@@ -42,7 +39,7 @@ export default {
   name: "PortfolioView",
   props: {
     portfolio: {
-      type: Object,
+      type: Array,
     },
   },
   components: {
@@ -88,6 +85,7 @@ export default {
 }
 
 .after {
+  font-size: 24px;
   line-height: 30px;
   text-align: center;
   display: flex;
@@ -143,6 +141,11 @@ export default {
     &-promo {
       position: relative;
       margin: 20px;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 0 10px 4px rgba(0, 2, 3, 0.2);
+      }
 
       .project-img {
         width: 100%;
@@ -150,11 +153,6 @@ export default {
         transition: 0.3s;
         border-radius: 5px;
         transition: all 0.5s;
-        cursor: pointer;
-
-        &:hover {
-          box-shadow: 0px 0 10px 4px rgba(0, 2, 3, 0.2);
-        }
       }
 
       &:hover .after {

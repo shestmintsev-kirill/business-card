@@ -10,7 +10,7 @@
         >
           <div class="user-card">
             <div class="userd-card-view">
-              <a target="_blank" href="/">
+              <a target="_blank" :href="review.link">
                 <img
                   class="user-card-view-platform"
                   :src="getImage(review.platform)"
@@ -74,7 +74,8 @@ export default {
         sex: false,
         name: "Ольга",
         title: "Консультация по инвестициям",
-        platform: "profi.jpg",
+        platform: "telegram2.png",
+        link: "https://t.me/olya_ermenina",
         showDescription: false,
         description:
           "Алина помогла мне разобраться в базовых вещах в инвестициях, ответила на все вопросы доступным языком. Очень внимательная к вопросам, рекомендую!",
@@ -83,7 +84,8 @@ export default {
         sex: true,
         name: "Михаил",
         title: "Аналитика под ключ в Power BI",
-        platform: "telegram2.png",
+        platform: "fl.png",
+        link: "https://www.fl.ru/users/ashestmintseva/opinions/",
         showDescription: false,
         description:
           "Все четко, в срок и по делу. Алина сделала срочную для нас задачу и результат презентовала заказчику. Речь поставлена, в Power BI разбирается на отлично!",
@@ -93,6 +95,7 @@ export default {
         name: "Эльдар",
         title: "Обучение Power BI",
         platform: "profi.jpg",
+        link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
         description:
           "Хорошее знание мат части. Понятное объяснение. Быстрый прогресс.",
@@ -101,7 +104,8 @@ export default {
         sex: true,
         name: "Евгений",
         title: "Консультация по Power Query",
-        platform: "fl.png",
+        platform: "profi.jpg",
+        link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
         description:
           "Отличное объяснение Power Query. По моей задаче было подсказано очень быстро и все было предельно понятно. Специалист отвечает на все вопросы и у неё получилось объяснить даже такому тупому человеку как я",
@@ -110,15 +114,27 @@ export default {
         sex: true,
         name: "Денис",
         title: "Консультация по Power BI",
-        platform: "telegram2.png",
+        platform: "profi.jpg",
+        link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
         description: "Все супер",
       },
       {
         sex: true,
+        name: "Сергей",
+        title: "Консультация по инвестициям",
+        platform: "telegram2.png",
+        link: "https://t.me/koraboom",
+        showDescription: false,
+        description:
+          "Алина смогла оказать помощь в очень короткие сроки. Надеюсь на дальнейшее сотрудничество!",
+      },
+      {
+        sex: true,
         name: "Тимофей",
-        title: "Обучение по Power BI",
-        platform: "fl.png",
+        title: "Обучение Power BI",
+        platform: "profi.jpg",
+        link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
         description:
           "Хороши специалист. Всё понятно объяснила. Всем рекомендую данного специалиста.",
@@ -128,9 +144,20 @@ export default {
         name: "Раиса",
         title: "Обучение Excel",
         platform: "profi.jpg",
+        link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
         description:
           "Спасибо. Алина объясняет с большим желанием помочь. Терпеливо, доходчиво. Рекомендую!",
+      },
+      {
+        sex: false,
+        name: "Марина",
+        title: "Аналитика под ключ в Power BI",
+        platform: "fl.png",
+        showDescription: false,
+        link: "https://www.fl.ru/users/ashestmintseva/opinions/",
+        description:
+          "Спасибо за отчеты, работа выполнена в тот срок, который и обговаривали. Результатом довольна. Рекомендую данного специалиста.",
       },
     ],
   }),
@@ -240,7 +267,6 @@ export default {
   &-view {
     width: 50px;
     height: 50px;
-    cursor: pointer;
 
     &-platform {
       height: 40px;
@@ -250,6 +276,7 @@ export default {
       left: 67px;
       top: 5px;
       transition: 0.3s;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.15);

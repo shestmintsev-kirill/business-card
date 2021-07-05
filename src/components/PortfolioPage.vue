@@ -16,49 +16,27 @@ export default {
   name: "PartfolioPage",
   data: () => ({
     show: null,
-    portfolio: {
-      store: {
-        imgView: "onlinestore.png",
-        description: "PortfolioPage.onlineStore",
-        title: "PortfolioStore.title",
-        modal: "portfolio.store",
-        images: [
-          "onlinestore.png",
-          "productList.png",
-          "productCard.png",
-          "productBuy.png",
-          "productOrder.png",
-          "productEdit.png",
-          "productNew.png",
-        ],
+    portfolio: [
+      {
+        imgView: "project_1.png",
+        description: "PortfolioPage.project_1",
+        title: "Project_1.title",
+        disclamer: "Project_1.disclamer",
+        images: ["project_1.png", "project_1.1.png", "project_1.2.png"],
       },
-      movie: {
-        imgView: "movies.png",
-        description: "PortfolioPage.movieApp",
-        title: "PortfolioMovie.title",
-        modal: "portfolio.movie",
-        images: [
-          "movieHome.png",
-          "movies.png",
-          "movieInfo.png",
-          "movieSearch.png",
-          "moviePagination.png",
-        ],
+      {
+        imgView: "project_2.png",
+        description: "PortfolioPage.project_2",
+        title: "Project_2.title",
+        images: ["project_2.png"],
       },
-      contact: {
-        imgView: "contactBook.png",
-        description: "PortfolioPage.contactBook",
-        title: "PortfolioContactBook.title",
-        modal: "portfolio.contact",
-        images: [
-          "contactBook.png",
-          "contactBookSearch.png",
-          "contactBookAdd.png",
-          "contactBookSort.png",
-          "contactBookEdit.png",
-        ],
+      {
+        imgView: "project_3.png",
+        description: "PortfolioPage.project_3",
+        title: "Project_3.title",
+        images: ["project_3.png", "project_3.1.png", "project_3.2.png"],
       },
-    },
+    ],
   }),
   methods: {
     showModal(e) {
@@ -66,6 +44,7 @@ export default {
     },
     closeModal() {
       this.show = null;
+      document.title = "Алина Шестминцева";
     },
   },
 };

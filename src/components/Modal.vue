@@ -80,20 +80,21 @@ export default {
     isDisabled: true,
   }),
   mounted() {
+    document.title = "Отправить сообщение";
     this.disableScrolling();
     this.focusInput();
   },
   methods: {
     disableScrolling() {
-      var x = window.scrollX;
-      var y = window.scrollY;
-      window.onscroll = function () {
+      let x = window.scrollX;
+      let y = window.scrollY;
+      window.onscroll = () => {
         window.scrollTo(x, y);
       };
     },
 
     enableScrolling() {
-      window.onscroll = function () {};
+      window.onscroll = () => {};
     },
     confirm(e, num) {
       e.length > num ? (this.isDisabled = false) : (this.isDisabled = true);
@@ -170,7 +171,6 @@ textarea {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
   transition: opacity 0.3s ease;
 }
 
@@ -289,6 +289,9 @@ textarea {
   .modal-container {
     width: 90%;
   }
+  .modal-mask {
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: $screen-sm) {
@@ -298,6 +301,10 @@ textarea {
   }
   .modal-container {
     width: 70%;
+  }
+
+  .modal-mask {
+    align-items: center;
   }
 }
 

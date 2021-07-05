@@ -20,10 +20,10 @@
             alt="close"
           />
         </div>
-        <div @click="$emit('unvisible'), enableScrolling()" class="link">
+        <!-- <div @click="$emit('unvisible'), enableScrolling()" class="link">
           <a @click.prevent="setLocale('ru')" href="/">RU</a> |
           <a @click.prevent="setLocale('en')" href="/">ENG</a>
-        </div>
+        </div> -->
       </div>
     </nav>
   </transition>
@@ -47,14 +47,15 @@ export default {
       localStorage.lang = JSON.stringify(locale);
     },
     disableScrolling() {
-      var x = window.scrollX;
-      var y = window.scrollY;
-      window.onscroll = function () {
+      let x = window.scrollX;
+      let y = window.scrollY;
+      window.onscroll = () => {
         window.scrollTo(x, y);
       };
     },
+
     enableScrolling() {
-      window.onscroll = function () {};
+      window.onscroll = () => {};
     },
   },
 };

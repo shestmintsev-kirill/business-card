@@ -12,7 +12,7 @@
       <button id="show-modal" @click="showModal = true" class="animation">
         {{ $t("ContactPage.btn") }}
       </button>
-      <Modal v-if="showModal" @close="showModal = false">
+      <Modal v-if="showModal" @close="closeMsg()">
         <h3 slot="header">{{ $t("ContactPage.modalTitle") }}</h3>
       </Modal>
     </div>
@@ -65,6 +65,9 @@ export default {
     getImage(img) {
       return require("@/assets/" + img);
     },
+    closeMsg() {
+      (this.showModal = false), (document.title = "Алина Шестминцева");
+    },
   },
 };
 </script>
@@ -104,7 +107,6 @@ button {
   &-title {
     font-weight: bold;
     font-size: 24px;
-    letter-spacing: 2px;
     margin: 20px 0;
   }
 
