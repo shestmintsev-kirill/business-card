@@ -46,7 +46,7 @@ export default {
       },
       {
         title: "Instagram",
-        link: "https://www.instagram.com/kirilljora",
+        link: "https://www.instagram.com/shestmintseva.a",
         icon: "instagram.png",
       },
       {
