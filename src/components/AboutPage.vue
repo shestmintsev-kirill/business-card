@@ -91,8 +91,8 @@ export default {
     },
     handleScroll() {
       if (
-        window.pageYOffset > 350 &&
-        document.documentElement.clientWidth > 750
+        window.pageYOffset > 320 &&
+        document.documentElement.clientWidth > 690
       ) {
         this.showIcons = true;
       }
@@ -100,6 +100,7 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+    console.log(document.documentElement.clientWidth);
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -148,6 +149,10 @@ export default {
     &-description {
       width: 90%;
     }
+
+    .icons {
+      display: none;
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -163,6 +168,12 @@ export default {
   @media (min-width: $screen-lg) {
     .icons {
       width: 100px;
+    }
+  }
+
+  @media (max-width: 690px) {
+    .icons {
+      display: none;
     }
   }
 }

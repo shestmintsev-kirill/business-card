@@ -83,6 +83,12 @@ export default {
 .slick-next {
   right: -20px;
 }
+@media (max-width: 570px) {
+  .slick-next,
+  .slick-prev {
+    opacity: 0;
+  }
+}
 
 .after {
   font-size: 24px;
