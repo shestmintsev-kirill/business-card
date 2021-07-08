@@ -100,7 +100,6 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
-    console.log(document.documentElement.clientWidth);
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
