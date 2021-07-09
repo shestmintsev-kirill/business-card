@@ -34,6 +34,7 @@ export default {
         imgView: "project_3.png",
         description: "PortfolioPage.project_3",
         title: "Project_3.title",
+        disclamer: "Project_1.disclamer",
         images: ["project_3.png", "project_3.1.png", "project_3.2.png"],
       },
     ],
