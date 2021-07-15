@@ -222,6 +222,7 @@ export default {
   &-wrapper {
     display: flex !important;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   &-photo {
@@ -238,7 +239,7 @@ export default {
 
     h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
   }
 
