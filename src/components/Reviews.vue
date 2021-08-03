@@ -31,7 +31,7 @@
               {{
                 review.showDescription
                   ? review.description
-                  : review.description.split(" ").slice(0, 10).join(" ")
+                  : review.description.split(" ").slice(0, 11).join(" ")
               }}
             </span>
             <br v-if="review.showDescription" />
@@ -141,6 +141,16 @@ export default {
       },
       {
         sex: false,
+        name: "Оксана",
+        title: "Консультация по Excel",
+        platform: "profi.jpg",
+        showDescription: false,
+        link: "https://profi.ru/profile/VarakinaAV3/",
+        description:
+          "Быстро вникла в задачу, учла пожелания. Не нашла ошибку в файле.",
+      },
+      {
+        sex: false,
         name: "Раиса",
         title: "Обучение Excel",
         platform: "profi.jpg",
@@ -168,16 +178,6 @@ export default {
         link: "https://profi.ru/profile/VarakinaAV3/",
         description:
           "Спасибо Алине большое! Помогла с моей рабочей  задачей в power BI, на которой я прям забуксовала, дальше дело пошло. Я в этом деле новичок, а Алина быстро схватила суть задачи и предложила решение! Все обозначенные мною вопросы успели обсудить. Спасибо ещё раз!",
-      },
-      {
-        sex: false,
-        name: "Оксана",
-        title: "Консультация по Excel",
-        platform: "profi.jpg",
-        showDescription: false,
-        link: "https://profi.ru/profile/VarakinaAV3/",
-        description:
-          "Быстро вникла в задачу, учла пожелания. Не нашла ошибку в файле",
       },
     ],
   }),
