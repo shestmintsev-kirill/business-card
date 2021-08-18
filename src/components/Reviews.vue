@@ -188,6 +188,16 @@ export default {
         link: "https://profi.ru/profile/VarakinaAV3/",
         description: "Отличный специалист по excel, рекомендую!",
       },
+      {
+        sex: false,
+        name: "Ирина",
+        title: "Консультация по Power BI",
+        platform: "profi.jpg",
+        showDescription: false,
+        link: "https://profi.ru/profile/VarakinaAV3/",
+        description:
+          "Алина, благодарю за очень продуктивное занятие. Я не новичок в power bi, при этом Алина показала мне полезные фишки для оптимизации моих запросов в power query и power bi. Занятие проходило в zoom: я сама зашла в power bi и демонстрировала свой экран. Алина подсказывала, что мне сделать. Такой формат занятия мне очень подошёл: фактически я все сделала своими руками, поэтому лучше поняла и запомнила.  Очень рекомендую Алину за профессионализм!",
+      },
     ],
   }),
   mounted() {
