@@ -181,6 +181,10 @@ export default {
   position: absolute;
   transition: all 0.3s ease;
   animation: opacity 1s linear;
+
+  &:hover {
+    transform: scale(1.2) !important;
+  }
 }
 
 @keyframes opacity {
