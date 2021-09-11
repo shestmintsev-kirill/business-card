@@ -66,7 +66,8 @@ export default {
       return require("@/assets/" + img);
     },
     closeMsg() {
-      (this.showModal = false), (document.title = "Алина Шестминцева");
+      this.showModal = false;
+      document.title = "Алина Шестминцева";
     },
   },
 };

@@ -21,8 +21,8 @@
           {{ $t("HomePage.profession") }}
         </div>
         <div class="lang">
-          <!-- <a @click.prevent="setLocale('ru')" href="/">RU</a> |
-          <a @click.prevent="setLocale('en')" href="/">ENG</a> -->
+          <a @click.prevent="setLocale('ru')" href="/">RU</a> |
+          <a @click.prevent="setLocale('en')" href="/">ENG</a>
         </div>
       </div>
       <div class="section-header-name-photo">
@@ -170,7 +170,8 @@ export default {
       &-me {
         justify-content: flex-start;
         .lang {
-          display: none;
+          position: absolute;
+          bottom: 0;
         }
 
         .profession {

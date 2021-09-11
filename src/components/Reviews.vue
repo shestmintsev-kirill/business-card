@@ -1,7 +1,7 @@
 <template>
   <div class="section-outer section-bg">
     <div class="section-reviews">
-      <h1 class="section-reviews-title">Отзывы</h1>
+      <h1 class="section-reviews-title">{{ $t("Review.title") }}</h1>
       <VueSlickCarousel v-bind="settings">
         <div
           v-for="(review, index) in reviews"
@@ -9,7 +9,7 @@
           class="section-reviews-wrapper"
         >
           <div class="user-card">
-            <div class="userd-card-view">
+            <div class="user-card-view">
               <a target="_blank" :href="review.link">
                 <img
                   v-if="review.platform"
@@ -31,13 +31,13 @@
             <span>
               {{
                 review.showDescription
-                  ? review.description
-                  : review.description.split(" ").slice(0, 11).join(" ")
+                  ? $t(review.description)
+                  : $t(review.description).split(" ").slice(0, 11).join(" ")
               }}
             </span>
             <br v-if="review.showDescription" />
             <a
-              v-if="review.description.length > 90"
+              v-if="reviewLength(review.description) > 90"
               @click.prevent="review.showDescription = !review.showDescription"
               href="/"
             >
@@ -78,8 +78,7 @@ export default {
         platform: "telegram2.png",
         link: "https://t.me/olya_ermenina",
         showDescription: false,
-        description:
-          "Алина помогла мне разобраться в базовых вещах в инвестициях, ответила на все вопросы доступным языком. Очень внимательная к вопросам, рекомендую!",
+        description: "Review.review_1",
       },
       {
         sex: true,
@@ -88,8 +87,7 @@ export default {
         platform: "fl.png",
         link: "https://www.fl.ru/users/ashestmintseva/opinions/",
         showDescription: false,
-        description:
-          "Все четко, в срок и по делу. Алина сделала срочную для нас задачу и результат презентовала заказчику. Речь поставлена, в Power BI разбирается на отлично!",
+        description: "Review.review_2",
       },
       {
         sex: true,
@@ -98,8 +96,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description:
-          "Хорошее знание мат части. Понятное объяснение. Быстрый прогресс.",
+        description: "Review.review_3",
       },
       {
         sex: true,
@@ -108,8 +105,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description:
-          "Отличное объяснение Power Query. По моей задаче было подсказано очень быстро и все было предельно понятно. Специалист отвечает на все вопросы и у неё получилось объяснить даже такому тупому человеку как я",
+        description: "Review.review_4",
       },
       {
         sex: true,
@@ -118,7 +114,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Все супер",
+        description: "Review.review_5",
       },
       {
         sex: true,
@@ -127,8 +123,7 @@ export default {
         platform: "telegram2.png",
         link: "https://t.me/koraboom",
         showDescription: false,
-        description:
-          "Алина смогла оказать помощь в очень короткие сроки. Надеюсь на дальнейшее сотрудничество!",
+        description: "Review.review_6",
       },
       {
         sex: true,
@@ -137,8 +132,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description:
-          "Хороши специалист. Всё понятно объяснила. Всем рекомендую данного специалиста.",
+        description: "Review.review_7",
       },
       {
         sex: false,
@@ -147,8 +141,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description:
-          "Быстро вникла в задачу, учла пожелания. Не нашла ошибку в файле.",
+        description: "Review.review_8",
       },
       {
         sex: false,
@@ -157,8 +150,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description:
-          "Спасибо. Алина объясняет с большим желанием помочь. Терпеливо, доходчиво. Рекомендую!",
+        description: "Review.review_9",
       },
       {
         sex: false,
@@ -167,8 +159,7 @@ export default {
         platform: "fl.png",
         showDescription: false,
         link: "https://www.fl.ru/users/ashestmintseva/opinions/",
-        description:
-          "Спасибо за отчеты, работа выполнена в тот срок, который и обговаривали. Результатом довольна. Рекомендую данного специалиста.",
+        description: "Review.review_10",
       },
       {
         sex: false,
@@ -177,8 +168,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description:
-          "Спасибо Алине большое! Помогла с моей рабочей  задачей в power BI, на которой я прям забуксовала, дальше дело пошло. Я в этом деле новичок, а Алина быстро схватила суть задачи и предложила решение! Все обозначенные мною вопросы успели обсудить. Спасибо ещё раз!",
+        description: "Review.review_11",
       },
       {
         sex: true,
@@ -187,7 +177,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description: "Отличный специалист по excel, рекомендую!",
+        description: "Review.review_12",
       },
       {
         sex: false,
@@ -196,8 +186,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description:
-          "Алина, благодарю за очень продуктивное занятие. Я не новичок в power bi, при этом Алина показала мне полезные фишки для оптимизации моих запросов в power query и power bi. Занятие проходило в zoom: я сама зашла в power bi и демонстрировала свой экран. Алина подсказывала, что мне сделать. Такой формат занятия мне очень подошёл: фактически я все сделала своими руками, поэтому лучше поняла и запомнила.  Очень рекомендую Алину за профессионализм!",
+        description: "Review.review_13",
       },
       {
         sex: false,
@@ -205,8 +194,7 @@ export default {
         title: "Обучение Excel",
         showDescription: false,
         link: "https://t.me/olya_ermenina",
-        description:
-          "Выражаю огромную благодарность за помощь в выполнении рабочих заданий в excel. Спасибо за подробное объяснение и нестандартный подход ( я бы сказала, даже творческий )! Обязательно будут рекомендоваться Вас своим друзьям и коллегам ! Теперь я знаю к кому я могу обратиться , если потребуется помощь! Ещё раз спасибо!",
+        description: "Review.review_14",
       },
       {
         sex: false,
@@ -215,8 +203,7 @@ export default {
         platform: "telegram2.png",
         showDescription: false,
         link: "https://t.me/kochetkova_ulya",
-        description:
-          "Хочу также оставить свой отзыв о пройденном курсе по инвестициям и твоём сопровождении. Все получилось отлично! Ты отлично подаёшь информацию, это не «сухая» теория, а реальные примеры, графики, знания из твоего опыта.  Что-то новенькое и не совсем понятное для меня можешь разложить обычным языком и все объяснить.  Благодаря тебе обучение прошло максимально быстро (менее месяца), спасибо, что напоминала о планировании дат следующих занятий. Да, после этого курса я вовлечена в Инвестиции и не намерена останавливаться на достигнутом, ведь есть то, что я ещё хочу познать и открыть для себя. Спасибо за кучу мотивации и энергии. Не пожалела, что прошла обучение и провела время в твоей приятной компании, спасибо!",
+        description: "Review.review_15",
       },
     ],
   }),
@@ -233,6 +220,9 @@ export default {
     },
     getImage(img) {
       return require("@/assets/" + img);
+    },
+    reviewLength(review) {
+      return this.$t(`${review}`).length;
     },
   },
 };
@@ -325,9 +315,6 @@ export default {
   position: relative;
 
   &-view {
-    width: 50px;
-    height: 50px;
-
     &-platform {
       height: 40px;
       width: 40px;
