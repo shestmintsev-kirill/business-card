@@ -78,7 +78,7 @@ export default {
         platform: "telegram2.png",
         link: "https://t.me/olya_ermenina",
         showDescription: false,
-        description: "Review.review_1",
+        description: "Review.review_1.review",
       },
       {
         sex: true,
@@ -87,7 +87,7 @@ export default {
         platform: "fl.png",
         link: "https://www.fl.ru/users/ashestmintseva/opinions/",
         showDescription: false,
-        description: "Review.review_2",
+        description: "Review.review_2.review",
       },
       {
         sex: true,
@@ -96,7 +96,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Review.review_3",
+        description: "Review.review_3.review",
       },
       {
         sex: true,
@@ -105,7 +105,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Review.review_4",
+        description: "Review.review_4.review",
       },
       {
         sex: true,
@@ -114,7 +114,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Review.review_5",
+        description: "Review.review_5.review",
       },
       {
         sex: true,
@@ -123,7 +123,7 @@ export default {
         platform: "telegram2.png",
         link: "https://t.me/koraboom",
         showDescription: false,
-        description: "Review.review_6",
+        description: "Review.review_6.review",
       },
       {
         sex: true,
@@ -132,7 +132,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Review.review_7",
+        description: "Review.review_7.review",
       },
       {
         sex: false,
@@ -141,7 +141,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description: "Review.review_8",
+        description: "Review.review_8.review",
       },
       {
         sex: false,
@@ -150,7 +150,7 @@ export default {
         platform: "profi.jpg",
         link: "https://profi.ru/profile/VarakinaAV3/",
         showDescription: false,
-        description: "Review.review_9",
+        description: "Review.review_9.review",
       },
       {
         sex: false,
@@ -159,7 +159,7 @@ export default {
         platform: "fl.png",
         showDescription: false,
         link: "https://www.fl.ru/users/ashestmintseva/opinions/",
-        description: "Review.review_10",
+        description: "Review.review_10.review",
       },
       {
         sex: false,
@@ -168,7 +168,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description: "Review.review_11",
+        description: "Review.review_11.review",
       },
       {
         sex: true,
@@ -177,7 +177,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description: "Review.review_12",
+        description: "Review.review_12.review",
       },
       {
         sex: false,
@@ -186,7 +186,7 @@ export default {
         platform: "profi.jpg",
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
-        description: "Review.review_13",
+        description: "Review.review_13.review",
       },
       {
         sex: false,
@@ -194,7 +194,7 @@ export default {
         title: "Обучение Excel",
         showDescription: false,
         link: "https://t.me/olya_ermenina",
-        description: "Review.review_14",
+        description: "Review.review_14.review",
       },
       {
         sex: false,
@@ -203,7 +203,16 @@ export default {
         platform: "telegram2.png",
         showDescription: false,
         link: "https://t.me/kochetkova_ulya",
-        description: "Review.review_15",
+        description: "Review.review_15.review",
+      },
+      {
+        sex: false,
+        name: "Елена",
+        title: "Консультация по Power Query",
+        platform: "profi.jpg",
+        showDescription: false,
+        link: "https://profi.ru/profile/VarakinaAV3/",
+        description: "Review.review_16.review",
       },
     ],
   }),
