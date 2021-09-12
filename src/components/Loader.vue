@@ -1,5 +1,5 @@
 <template>
-  <div v-show="loading" class="container">
+  <div class="container">
     <div class="circle circle-1"></div>
     <div class="circle circle-2"></div>
     <div class="circle circle-3"></div>
@@ -11,18 +11,11 @@
 <script>
 export default {
   name: "Loader",
-  data: () => ({
-    loading: true,
-  }),
   mounted() {
-    this.showToggle();
+    document.querySelector("body").style.overflow = "hidden";
   },
-  methods: {
-    showToggle() {
-      setTimeout(() => {
-        this.loading = false;
-      }, 1000);
-    },
+  beforeDestroy() {
+    document.querySelector("body").style.overflow = null;
   },
 };
 </script>

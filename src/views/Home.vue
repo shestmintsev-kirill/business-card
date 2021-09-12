@@ -1,11 +1,14 @@
 <template>
-  <div v-scroll-spy="{ offset: 30 }">
-    <HomePage />
-    <AboutPage />
-    <SkillsPage />
-    <PortfolioPage />
-    <Reviews />
-    <ContactPage />
+  <div>
+    <Loader v-if="showLoader" />
+    <div v-scroll-spy="{ offset: 30 }">
+      <HomePage />
+      <AboutPage />
+      <SkillsPage />
+      <PortfolioPage />
+      <Reviews />
+      <ContactPage />
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,7 @@ import SkillsPage from "@/components/SkillsPage.vue";
 import PortfolioPage from "@/components/PortfolioPage.vue";
 import ContactPage from "@/components/ContactPage.vue";
 import Reviews from "@/components/Reviews.vue";
+import Loader from "@/components/Loader.vue";
 
 export default {
   name: "Home",
@@ -26,6 +30,20 @@ export default {
     PortfolioPage,
     Reviews,
     ContactPage,
+    Loader,
+  },
+  data: () => ({
+    showLoader: true,
+  }),
+  mounted() {
+    this.canselLoader();
+  },
+  methods: {
+    canselLoader() {
+      setTimeout(() => {
+        this.showLoader = false;
+      }, 1000);
+    },
   },
 };
 </script>
