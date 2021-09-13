@@ -171,6 +171,12 @@ export default {
         showDescription: false,
         link: "https://profi.ru/profile/VarakinaAV3/",
       },
+      {
+        sex: false,
+        platform: "profi.jpg",
+        showDescription: false,
+        link: "https://profi.ru/profile/VarakinaAV3/",
+      },
     ],
   }),
   mounted() {
