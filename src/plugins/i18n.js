@@ -9,10 +9,10 @@ export const i18n = new VueI18n({
   messages: {
     en: {
       HomePage: {
-        name1: "АНАЛИТИКА",
-        name2: "ФИНАНСЫ",
-        name3: "ИНВЕСТИЦИИ",
-        profession: "Алина Шестминцева",
+        name1: "ANALYTICS",
+        name2: "FINANCE",
+        name3: "INVESTMENTS",
+        profession: "Alina Shestmintseva",
       },
       AboutPage: {
         title: "Who am I?",
