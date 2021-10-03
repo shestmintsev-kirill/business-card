@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import "normalize-scss";
 import "./plugins/scrollSpy";
-import { i18n } from "./plugins/i18n";
+import { i18n } from "./plugins/i18n/i18n";
 
 Vue.config.productionTip = false;
 
