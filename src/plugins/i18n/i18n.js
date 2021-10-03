@@ -6,7 +6,7 @@ import Russian from "./language/ru";
 Vue.use(VueI18n);
 
 export const i18n = new VueI18n({
-  locale: "en",
+  locale: "ru",
   fallbackLocale: "en",
   messages: {
     en: English,
