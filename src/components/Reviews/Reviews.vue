@@ -32,7 +32,7 @@
             <h3>{{ $t(`Review.review_${index + 1}.title`) }}</h3>
             <span>
               {{
-                review.showDescription
+                review.expand
                   ? $t(`Review.review_${index + 1}.review`)
                   : $t(`Review.review_${index + 1}.review`)
                       .split(" ")
@@ -40,13 +40,13 @@
                       .join(" ")
               }}
             </span>
-            <br v-if="review.showDescription" />
+            <br v-if="review.expand" />
             <a
               v-if="reviewLength(`Review.review_${index + 1}.review`) > 90"
-              @click.prevent="review.showDescription = !review.showDescription"
+              @click.prevent="review.expand = !review.expand"
               href="/"
             >
-              {{ review.showDescription ? " . . . скрыть" : " . . ." }}</a
+              {{ review.expand ? " . . . скрыть" : " . . ." }}</a
             >
           </div>
         </div>
@@ -76,12 +76,24 @@ export default {
       slidesToScroll: 1,
       adaptiveHeight: true,
     },
-    reviews: reviews,
+    reviews: [],
   }),
+  created() {
+    this.reviewsFetch();
+  },
   mounted() {
     this.arrowCarouselWidth();
   },
   methods: {
+    reviewsFetch() {
+      reviews.forEach((r) => {
+        const newObj = {
+          ...r,
+          expand: false,
+        };
+        this.reviews.push(newObj);
+      });
+    },
     arrowCarouselWidth() {
       if (document.documentElement.clientWidth < 758) {
         this.settings.arrows = false;
