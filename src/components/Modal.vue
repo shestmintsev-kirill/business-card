@@ -48,13 +48,13 @@
                     class="modal-default-button send"
                     @click.stop="send"
                   >
-                    {{ $t("Modal.send") }}
+                    {{ $t('Modal.send') }}
                   </button>
                   <button
                     class="modal-default-button close"
                     @click.prevent="$emit('close')"
                   >
-                    {{ $t("Modal.close") }}
+                    {{ $t('Modal.close') }}
                   </button>
                 </div>
               </form>
@@ -68,21 +68,21 @@
 
 <script>
 export default {
-  name: "Modal",
+  name: 'Modal',
   data: () => ({
     name: null,
     email: null,
     tel: null,
     message: null,
-    isDisabled: true,
+    isDisabled: true
   }),
   mounted() {
-    document.title = "Отправить сообщение";
-    document.querySelector("body").style.overflow = "hidden";
+    document.title = 'Отправить сообщение';
+    document.querySelector('body').style.overflow = 'hidden';
     this.focusInput();
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
+    document.querySelector('body').style.overflow = null;
   },
   methods: {
     confirm(e, num) {
@@ -90,18 +90,18 @@ export default {
     },
     focusInput() {
       this.$refs.input.focus();
-    },
+    }
   },
   watch: {
     message(target) {
       this.confirm(target, 3);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   @include font-eng;
   @include font-ru;

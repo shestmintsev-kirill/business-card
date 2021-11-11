@@ -10,13 +10,13 @@
 
 <script>
 export default {
-  name: "Loader",
+  name: 'Loader',
   mounted() {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
-  },
+    document.querySelector('body').style.overflow = null;
+  }
 };
 </script>
 
@@ -48,7 +48,7 @@ $circle-margin: 7px;
   align-items: center;
 
   &:before {
-    content: "";
+    content: '';
     width: $circle-size;
     height: $circle-size;
     border-radius: 50%;

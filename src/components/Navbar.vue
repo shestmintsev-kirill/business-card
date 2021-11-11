@@ -10,16 +10,16 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   props: {
     links: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   data: () => ({
     isScroll: false,
-    scrollPosition: 0,
+    scrollPosition: 0
   }),
   methods: {
     handleScroll() {
@@ -33,19 +33,19 @@ export default {
         this.isScroll = false;
       }
       this.scrollPosition = window.pageYOffset;
-    },
+    }
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .nav {
   position: fixed;

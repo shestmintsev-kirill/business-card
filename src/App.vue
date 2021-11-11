@@ -5,24 +5,24 @@
 </template>
 
 <script>
-import Home from "./views/Home.vue";
+import Home from './views/Home.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Home,
+    Home
   },
   mounted() {
     if (localStorage.lang) {
       this.$i18n.locale = JSON.parse(localStorage.lang);
     }
-  },
+  }
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/style.scss";
-@import "normalize-scss";
+@import '@/assets/scss/style.scss';
+@import 'normalize-scss';
 @include normalize();
 
 * {

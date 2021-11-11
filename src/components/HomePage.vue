@@ -18,7 +18,7 @@
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
         <div class="profession">
-          {{ $t("HomePage.profession") }}
+          {{ $t('HomePage.profession') }}
         </div>
         <div class="lang">
           <a @click.prevent="setLocale('ru')" href="/">RU</a> |
@@ -33,26 +33,26 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
-import MobilNavbar from "@/components/MobilNavbar.vue";
+import Navbar from '@/components/Navbar.vue';
+import MobilNavbar from '@/components/MobilNavbar.vue';
 
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     Navbar,
-    MobilNavbar,
+    MobilNavbar
   },
   data: () => ({
     navigation: false,
     scrollNav: false,
     links: [
-      "Navbar.home",
-      "Navbar.about",
-      "Navbar.skills",
-      "Navbar.portfolio",
-      "Navbar.reviews",
-      "Navbar.contact",
-    ],
+      'Navbar.home',
+      'Navbar.about',
+      'Navbar.skills',
+      'Navbar.portfolio',
+      'Navbar.reviews',
+      'Navbar.contact'
+    ]
   }),
 
   methods: {
@@ -65,13 +65,13 @@ export default {
     setLocale(locale) {
       this.$i18n.locale = locale;
       localStorage.lang = JSON.stringify(locale);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   position: relative;
 }

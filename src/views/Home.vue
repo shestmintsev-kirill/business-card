@@ -13,16 +13,16 @@
 </template>
 
 <script>
-import HomePage from "@/components/HomePage.vue";
-import AboutPage from "@/components/AboutPage.vue";
-import SkillsPage from "@/components/SkillsPage.vue";
-import PortfolioPage from "@/components/Portfolio/PortfolioPage.vue";
-import ContactPage from "@/components/ContactPage.vue";
-import Reviews from "@/components/Reviews/Reviews.vue";
-import Loader from "@/components/Loader.vue";
+import HomePage from '@/components/HomePage.vue';
+import AboutPage from '@/components/AboutPage.vue';
+import SkillsPage from '@/components/SkillsPage.vue';
+import PortfolioPage from '@/components/Portfolio/PortfolioPage.vue';
+import ContactPage from '@/components/ContactPage.vue';
+import Reviews from '@/components/Reviews/Reviews.vue';
+import Loader from '@/components/Loader.vue';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     HomePage,
     AboutPage,
@@ -30,10 +30,10 @@ export default {
     PortfolioPage,
     Reviews,
     ContactPage,
-    Loader,
+    Loader
   },
   data: () => ({
-    showLoader: true,
+    showLoader: true
   }),
   mounted() {
     this.canselLoader();
@@ -43,13 +43,13 @@ export default {
       setTimeout(() => {
         this.showLoader = false;
       }, 1000);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   @include font-eng;
   @include font-ru;

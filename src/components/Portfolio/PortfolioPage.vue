@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import Portfolio from "./Portfolio";
-import PortfolioView from "./PortfolioView.vue";
-import portfolioItems from "./portfolioItems";
+import Portfolio from './Portfolio';
+import PortfolioView from './PortfolioView.vue';
+import portfolioItems from './portfolioItems';
 
 export default {
   components: { PortfolioView, Portfolio },
-  name: "PartfolioPage",
+  name: 'PartfolioPage',
   data: () => ({
     show: null,
-    portfolio: portfolioItems,
+    portfolio: portfolioItems
   }),
   methods: {
     showModal(e) {
@@ -25,14 +25,14 @@ export default {
     },
     closeModal() {
       this.show = null;
-      document.title = "Алина Шестминцева";
-    },
-  },
+      document.title = 'Алина Шестминцева';
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .section-partfolio {
   padding-bottom: 40px;

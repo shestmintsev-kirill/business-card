@@ -23,30 +23,30 @@
 
 <script>
 export default {
-  name: "MobilNavbar",
+  name: 'MobilNavbar',
   props: {
     links: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   mounted() {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
+    document.querySelector('body').style.overflow = null;
   },
   methods: {
     setLocale(locale) {
       this.$i18n.locale = locale;
       localStorage.lang = JSON.stringify(locale);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .mobil-leave-active {
   opacity: 0;

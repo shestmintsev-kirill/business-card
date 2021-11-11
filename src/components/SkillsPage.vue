@@ -1,7 +1,7 @@
 <template>
   <section class="section-outer section-skills">
     <div class="section-skills-title text-center">
-      <span>{{ $t("SkillsPage.title") }}</span>
+      <span>{{ $t('SkillsPage.title') }}</span>
     </div>
     <div class="section-skills-content">
       <div
@@ -22,41 +22,41 @@
 
 <script>
 export default {
-  name: "SkillsPage",
+  name: 'SkillsPage',
   data: () => ({
     skillsList: [
       {
-        title: "Excel",
-        img: "excel.png",
+        title: 'Excel',
+        img: 'excel.png'
       },
       {
-        title: "Power BI",
-        img: "power-bi.png",
+        title: 'Power BI',
+        img: 'power-bi.png'
       },
       {
-        title: "SQL",
-        img: "sql.png",
+        title: 'SQL',
+        img: 'sql.png'
       },
       {
-        title: "DAX",
-        img: "dax.png",
+        title: 'DAX',
+        img: 'dax.png'
       },
       {
-        title: "M",
-        img: "m.png",
-      },
-    ],
+        title: 'M',
+        img: 'm.png'
+      }
+    ]
   }),
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
-    },
-  },
+      return require('@/assets/' + img);
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 .transform {
   transition: 0.3s;
   &:hover {
@@ -94,7 +94,7 @@ export default {
     justify-content: space-between;
 
     &-vue {
-      img[alt="skill"] {
+      img[alt='skill'] {
         width: 128px;
         height: 128px;
       }
@@ -102,7 +102,7 @@ export default {
   }
   @media (max-width: $screen-sm-max) {
     &-content {
-      img[alt="skill"] {
+      img[alt='skill'] {
         width: 90px;
         height: 90px;
       }
@@ -123,7 +123,7 @@ export default {
       flex-wrap: wrap;
       justify-content: space-evenly;
 
-      img[alt="skill"] {
+      img[alt='skill'] {
         width: 70px;
         height: 70px;
       }
@@ -151,7 +151,7 @@ export default {
       margin-bottom: 100px;
       margin-top: 80px;
 
-      img[alt="skill"] {
+      img[alt='skill'] {
         margin-bottom: 20px;
       }
     }

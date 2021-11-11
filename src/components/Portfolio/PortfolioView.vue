@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="section-partfolio-head">
-      <span>{{ $t("PortfolioPage.title") }}</span>
+      <span>{{ $t('PortfolioPage.title') }}</span>
     </div>
     <div class="section-inner">
       <VueSlickCarousel v-bind="settings">
@@ -31,19 +31,19 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
-  name: "PortfolioView",
+  name: 'PortfolioView',
   props: {
     portfolio: {
-      type: Array,
-    },
+      type: Array
+    }
   },
   components: {
-    VueSlickCarousel,
+    VueSlickCarousel
   },
   data: () => ({
     settings: {
@@ -52,15 +52,15 @@ export default {
       infinite: true,
       adaptiveHeight: true,
       slidesToScroll: 1,
-      rtl: true,
-    },
+      rtl: true
+    }
   }),
   mounted() {
     this.arrowCarouselWidth();
   },
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     },
     arrowCarouselWidth() {
       if (document.documentElement.clientWidth < 566) {
@@ -68,13 +68,13 @@ export default {
       } else {
         this.settings.arrows = true;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .slick-prev {
   left: -20px;

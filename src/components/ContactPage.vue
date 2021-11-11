@@ -1,19 +1,19 @@
 <template>
   <footer class="section-outer section-contact">
     <div class="section-contact-title">
-      <span>{{ $t("ContactPage.title") }}</span>
+      <span>{{ $t('ContactPage.title') }}</span>
     </div>
     <div class="section-contact-text">
-      <span>{{ $t("ContactPage.description") }}</span>
+      <span>{{ $t('ContactPage.description') }}</span>
       <a href="tel:+79857591752">+7(985)-759-17-52</a>
       <a href="mailto:a.shestmintseva@gmail.com">a.shestmintseva@gmail.com</a>
     </div>
     <div class="section-contact-btn">
-      <button id="show-modal" @click="showModal = true" class="animation">
-        {{ $t("ContactPage.btn") }}
+      <button id="show-modal" class="animation" @click="showModal = true">
+        {{ $t('ContactPage.btn') }}
       </button>
       <Modal v-if="showModal" @close="closeMsg()">
-        <h3 slot="header">{{ $t("ContactPage.modalTitle") }}</h3>
+        <h3 slot="header">{{ $t('ContactPage.modalTitle') }}</h3>
       </Modal>
     </div>
     <div class="section-contact-sosial">
@@ -29,52 +29,52 @@
 </template>
 
 <script>
-import Modal from "@/components/Modal";
+import Modal from '@/components/Modal';
 
 export default {
-  name: "ContactPage",
+  name: 'ContactPage',
   components: {
-    Modal,
+    Modal
   },
   data: () => ({
     showModal: false,
     sosial: [
       {
-        title: "WhatsApp",
-        link: "https://wa.me/79785408650",
-        icon: "whatsapp.png",
+        title: 'WhatsApp',
+        link: 'https://wa.me/79785408650',
+        icon: 'whatsapp.png'
       },
       {
-        title: "Instagram",
-        link: "https://www.instagram.com/shestmintseva.a",
-        icon: "instagram.png",
+        title: 'Instagram',
+        link: 'https://www.instagram.com/shestmintseva.a',
+        icon: 'instagram.png'
       },
       {
-        title: "Telegram",
-        link: "https://t.me/ashestmintseva",
-        icon: "telegram.png",
+        title: 'Telegram',
+        link: 'https://t.me/ashestmintseva',
+        icon: 'telegram.png'
       },
       {
-        title: "LinkedIn",
-        link: "https://www.linkedin.com/in/ashestmintseva/",
-        icon: "linkedin.png",
-      },
-    ],
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/ashestmintseva/',
+        icon: 'linkedin.png'
+      }
+    ]
   }),
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     },
     closeMsg() {
       this.showModal = false;
-      document.title = "Алина Шестминцева";
-    },
-  },
+      document.title = 'Алина Шестминцева';
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 img {
   transition: 0.3s;

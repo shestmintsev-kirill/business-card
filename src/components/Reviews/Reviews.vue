@@ -1,7 +1,7 @@
 <template>
   <div class="section-outer section-bg">
     <div class="section-reviews">
-      <h1 class="section-reviews-title">{{ $t("Review.title") }}</h1>
+      <h1 class="section-reviews-title">{{ $t('Review.title') }}</h1>
       <VueSlickCarousel v-bind="settings">
         <div
           v-for="(review, index) in reviews"
@@ -35,19 +35,19 @@
                 review.expand
                   ? $t(`Review.review_${index + 1}.review`)
                   : $t(`Review.review_${index + 1}.review`)
-                      .split(" ")
+                      .split(' ')
                       .slice(0, 11)
-                      .join(" ")
+                      .join(' ')
               }}
             </span>
             <br v-if="review.expand" />
             <a
               v-if="reviewLength(`Review.review_${index + 1}.review`) > 90"
-              @click.prevent="review.expand = !review.expand"
               href="/"
+              @click.prevent="review.expand = !review.expand"
             >
-              {{ review.expand ? " . . . скрыть" : " . . ." }}</a
-            >
+              {{ review.expand ? ' . . . скрыть' : ' . . .' }}
+            </a>
           </div>
         </div>
       </VueSlickCarousel>
@@ -56,15 +56,15 @@
 </template>
 
 <script>
-import reviews from "./reviews";
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import reviews from './reviews';
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
-  name: "Reviews",
+  name: 'Reviews',
   components: {
-    VueSlickCarousel,
+    VueSlickCarousel
   },
   data: () => ({
     settings: {
@@ -74,9 +74,9 @@ export default {
       rows: 3,
       slidesToShow: 1,
       slidesToScroll: 1,
-      adaptiveHeight: true,
+      adaptiveHeight: true
     },
-    reviews: [],
+    reviews: []
   }),
   created() {
     this.reviewsFetch();
@@ -86,10 +86,10 @@ export default {
   },
   methods: {
     reviewsFetch() {
-      reviews.forEach((r) => {
+      reviews.forEach(r => {
         const newObj = {
           ...r,
-          expand: false,
+          expand: false
         };
         this.reviews.push(newObj);
       });
@@ -102,17 +102,17 @@ export default {
       }
     },
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     },
     reviewLength(review) {
       return this.$t(`${review}`).length;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   @include font-eng;
   @include font-ru;

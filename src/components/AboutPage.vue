@@ -1,7 +1,7 @@
 <template>
   <section class="section-outer section-about">
     <div class="section-about-title">
-      <span>{{ $t("AboutPage.title") }}</span>
+      <span>{{ $t('AboutPage.title') }}</span>
     </div>
     <div class="section-about-description">
       <i18n path="AboutPage.about">
@@ -9,7 +9,7 @@
       </i18n>
     </div>
     <div class="section-about-title">
-      <span>{{ $t("AboutPage.subTitle") }}</span>
+      <span>{{ $t('AboutPage.subTitle') }}</span>
     </div>
     <div class="section-about-description">
       <i18n path="AboutPage.subAbout">
@@ -25,7 +25,7 @@
           { top: icon.top },
           { left: icon.left },
           { right: icon.right },
-          { transform: icon.transform },
+          { transform: icon.transform }
         ]"
         :src="getImage(`${icon.img}`)"
         alt="Power BI"
@@ -36,58 +36,64 @@
 
 <script>
 export default {
-  name: "AboutPage",
+  name: 'AboutPage',
   data: () => ({
     showIcons: false,
     iconsOther: [
       {
-        img: "icon_1.png",
-        left: 120 + "px",
-        top: 30 + "px",
-        transform: "rotate(20deg)",
+        img: 'icon_1.png',
+        left: 120 + 'px',
+        top: 30 + 'px',
+        transform: 'rotate(20deg)'
       },
       {
-        img: "icon_2.png",
-        right: 100 + "px",
-        top: 95 + "px",
-        transform: "rotate(-35deg)",
+        img: 'icon_2.png',
+        right: 100 + 'px',
+        top: 95 + 'px',
+        transform: 'rotate(-35deg)'
       },
       {
-        img: "icon_3.png",
-        left: 55 + "px",
-        top: 210 + "px",
-        transform: "rotate(-10deg)",
+        img: 'icon_3.png',
+        left: 55 + 'px',
+        top: 210 + 'px',
+        transform: 'rotate(-10deg)'
       },
       {
-        img: "icon_4.png",
-        right: 45 + "px",
-        top: 270 + "px",
-        transform: "rotate(15deg)",
+        img: 'icon_4.png',
+        right: 45 + 'px',
+        top: 270 + 'px',
+        transform: 'rotate(15deg)'
       },
       {
-        img: "icon_5.png",
-        left: 95 + "px",
-        top: 350 + "px",
-        transform: "rotate(0deg)",
+        img: 'icon_5.png',
+        left: 95 + 'px',
+        top: 350 + 'px',
+        transform: 'rotate(0deg)'
       },
       {
-        img: "icon_6.png",
-        right: 110 + "px",
-        top: 450 + "px",
-        transform: "rotate(-20deg)",
+        img: 'icon_6.png',
+        right: 110 + 'px',
+        top: 450 + 'px',
+        transform: 'rotate(-20deg)'
       },
       {
-        img: "icon_7.png",
-        left: 90 + "px",
-        top: 480 + "px",
-        transform: "rotate(30deg)",
-      },
-    ],
+        img: 'icon_7.png',
+        left: 90 + 'px',
+        top: 480 + 'px',
+        transform: 'rotate(30deg)'
+      }
+    ]
   }),
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 
   methods: {
     getImage(img) {
-      return require("@/assets/AboutIcons/" + img);
+      return require('@/assets/AboutIcons/' + img);
     },
     handleScroll() {
       if (
@@ -96,19 +102,13 @@ export default {
       ) {
         this.showIcons = true;
       }
-    },
-  },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .section-about {
   position: relative;
