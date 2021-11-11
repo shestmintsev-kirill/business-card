@@ -11,11 +11,10 @@
           class="section-partfolio-project"
         >
           <div
-            @click.prevent="$emit('show-modal', project)"
             class="section-partfolio-project-promo"
+            @click.prevent="$emit('show-modal', project)"
           >
-            <a
-              ><img
+            <a><img
                 class="project-img"
                 :src="getImage(`${project.imgView}`)"
                 alt="onlinestore"
@@ -37,13 +36,13 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
   name: 'PortfolioView',
+  components: {
+    VueSlickCarousel
+  },
   props: {
     portfolio: {
       type: Array
     }
-  },
-  components: {
-    VueSlickCarousel
   },
   data: () => ({
     settings: {

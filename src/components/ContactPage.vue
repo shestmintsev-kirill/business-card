@@ -22,8 +22,7 @@
         :key="item.title"
         target="_blank"
         :href="item.link"
-        ><img class="sosial-img" :src="getImage(`${item.icon}`)" alt="sosial"
-      /></a>
+        ><img class="sosial-img" :src="getImage(`${item.icon}`)" alt="sosial" /></a>
     </div>
   </footer>
 </template>

@@ -13,8 +13,8 @@ import PortfolioView from './PortfolioView.vue';
 import portfolioItems from './portfolioItems';
 
 export default {
-  components: { PortfolioView, Portfolio },
   name: 'PartfolioPage',
+  components: { PortfolioView, Portfolio },
   data: () => ({
     show: null,
     portfolio: portfolioItems

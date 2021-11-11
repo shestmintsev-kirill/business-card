@@ -10,19 +10,19 @@
     <div class="section-header-name">
       <div class="section-header-name-me">
         <div class="morphing">
-          <i18n class="word" path="HomePage.name1"></i18n>
-          <i18n class="word" path="HomePage.name2"></i18n>
-          <i18n class="word" path="HomePage.name3"></i18n>
+          <i18n class="word" path="HomePage.name1" />
+          <i18n class="word" path="HomePage.name2" />
+          <i18n class="word" path="HomePage.name3" />
         </div>
-        <div @click="navClick" class="icon">
+        <div class="icon" @click="navClick">
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
         <div class="profession">
           {{ $t('HomePage.profession') }}
         </div>
         <div class="lang">
-          <a @click.prevent="setLocale('ru')" href="/">RU</a> |
-          <a @click.prevent="setLocale('en')" href="/">ENG</a>
+          <a href="/" @click.prevent="setLocale('ru')">RU</a> |
+          <a href="/" @click.prevent="setLocale('en')">ENG</a>
         </div>
       </div>
       <div class="section-header-name-photo">

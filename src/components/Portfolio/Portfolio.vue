@@ -1,13 +1,11 @@
 <template>
   <transition name="modal">
-    <div @click.self="$emit('close-modal')" class="modal-mask">
-      <div @click.self="$emit('close-modal')" class="modal-wrapper">
+    <div class="modal-mask" @click.self="$emit('close-modal')">
+      <div class="modal-wrapper" @click.self="$emit('close-modal')">
         <div class="section-outer modal-container">
           <div class="section-partfolio-title">
             <div class="section-partfolio-title-back">
-              <a @click="$emit('close-modal')"
-                ><img class="back" src="@/assets/back.png" alt="back"
-              /></a>
+              <a @click="$emit('close-modal')"><img class="back" src="@/assets/back.png" alt="back" /></a>
             </div>
             <div class="section-partfolio-title-text">
               <div>
