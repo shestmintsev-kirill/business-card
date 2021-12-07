@@ -23,6 +23,7 @@ const English = {
     project_2:
       'Key figures: proceeds, profit, student number, average check by student, courses, period, source of leads.',
     project_3: 'Key figures: leads, sales conversion, quality control system.',
+    project_4: 'The report reveals a sales analysis by distributors, trade points, sales representatives, ABC analysis of goods and sales growth analysis in different dimensions'
   },
   Review: {
     title: 'Reviews',
@@ -160,6 +161,9 @@ const English = {
   },
   Project_3: {
     title: 'Sales department performance analysis',
+  },
+  Project_4: {
+    title: 'Analysis of Distributor`s Sales',
   },
 };
 

@@ -1,5 +1,11 @@
 const portfolio = [
   {
+    imgView: 'project_4.png',
+    description: 'PortfolioPage.project_4',
+    title: 'Project_4.title',
+    images: ['project_4.png', 'project_4.1.png', 'project_4.2.png'],
+  },
+  {
     imgView: 'project_3.png',
     description: 'PortfolioPage.project_3',
     title: 'Project_3.title',
@@ -18,7 +24,7 @@ const portfolio = [
     description: 'PortfolioPage.project_2',
     title: 'Project_2.title',
     images: ['project_2.png'],
-  },
+  }
 ];
 
 export default portfolio;
